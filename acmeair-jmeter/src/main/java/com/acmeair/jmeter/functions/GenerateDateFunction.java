@@ -40,8 +40,7 @@ public class GenerateDateFunction extends AbstractFunction {
 	@Override
 	public String execute(SampleResult arg0, Sampler arg1)
 			throws InvalidVariableException {
-		SimpleDateFormat date_format = new SimpleDateFormat(
-				"EEE MMM dd 00:00:00 z yyyy");
+		SimpleDateFormat date_format = new SimpleDateFormat("yyyy-MM-dd");
 		if (parameters.get(0).execute().equalsIgnoreCase("from")) {
 			Calendar aDay = Calendar.getInstance();
 			aDay.add(Calendar.DATE, new Random().nextInt(6));
